@@ -247,7 +247,7 @@ Access modifiers should be grouped in the following order:
 
 - public
 - protected
-- public
+- private
 
 Members within the above groups should be grouped in the following order:
 
