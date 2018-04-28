@@ -1,6 +1,6 @@
 # C++ Style Guide
 
-This guide is for both the C++ programming language.
+This guide is for the C++ programming language.
 
 ## Table of Contents
 
