@@ -316,7 +316,16 @@ Use C++ headers instead of C headers, for example use ctime instead of time.h.
 
 ### Include Guards
 
-Prefer using `#pragma once`. All modern compilers worth using support it somehow.
+Use include guards in the following format for all header files:
+
+```cpp
+#ifndef HEADER_NAME_H
+#define HEADER_NAME_H
+// header code
+#endif
+```
+
+Do not use `#pragma once`. Most modern compilers support it somehow, but it is still not standard.
 
 ### Using Namespace
 
