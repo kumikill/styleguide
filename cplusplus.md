@@ -313,6 +313,10 @@ Example:
 
 Use C++ headers instead of C headers, for example use ctime instead of time.h.
 
+### Include Guards
+
+Prefer using `#pragma once`. All modern compilers worth using support it somehow.
+
 ### Using Namespace
 
 Do not use `using namespace std;` anywhere. This can cause issues when using libraries with conflicted type names. Prefer prefixing with std::.
