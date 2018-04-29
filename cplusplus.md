@@ -23,6 +23,7 @@ This guide is for the C++ programming language.
 - [nullptr vs NULL](#nullptr-vs-null)
 - [File Structure and Libraries](#file-structure-and-libraries)
   - [Includes](#includes)
+  - [Include Guards](#include-guards)
   - [Using Namespace](#using-namespace)
   - [Boost](#boost)
 
