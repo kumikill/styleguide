@@ -274,3 +274,42 @@ Do return early except when having a single return point improves performance or
 ### Goto
 
 Do not use goto statements.
+
+## File Structure and Libraries
+
+Header and source files should be named in camelCase.
+
+Source files should use the *.cpp file extension and not the less common *.cxx or *.cc extensions.
+
+Header files should use the *.hpp file extension because it makes it clear that the header is written for C++.
+The exception is when writing headers that are meant to also support C, in which case use the *.h extension.
+
+### Includes
+
+Includes should be placed at the top of a file (below any copyright/file header comments) in the following order:
+
+- Project headers using #include "example.hpp"
+- Libraries local to the project using #include "library/example.hpp"
+- Libraries elsewhere in the system using #include <library/example.hpp>
+- Standard headers using #include <string>
+
+Example:
+
+```cpp
+#include "log.hpp"
+#include "freetype/freetype.h"
+#include <GLFW/glfw3.h>
+#include <string>
+```
+
+Use C++ headers instead of C headers, for example use ctime instead of time.h.
+
+### Using Namespace
+
+Do not use "using namespace std;" anywhere. This can cause issues when using libraries with conflicted type names. Prefer prefixing with std::.
+
+### Boost
+
+Prefer standard C++ types instead of Boost types, for example smart pointers.
+
+Also prefer to not use Boost when possible as Boost is a bulky library.
