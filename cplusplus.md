@@ -20,6 +20,10 @@ This guide is for the C++ programming language.
 - [Control Flow](#control-flow)
   - [Early Returns](#early-returs)
   - [Goto](#goto)
+- [File Structure and Libraries](#file-structure-and-libraries)
+  - [Includes](#includes)
+  - [Using Namespace](#using-namespace)
+  - [Boost](#boost)
 
 ## Naming Convention
 
