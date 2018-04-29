@@ -20,6 +20,7 @@ This guide is for the C++ programming language.
 - [Control Flow](#control-flow)
   - [Early Returns](#early-returs)
   - [Goto](#goto)
+- [nullptr vs NULL](#nullptr-vs-null)
 - [File Structure and Libraries](#file-structure-and-libraries)
   - [Includes](#includes)
   - [Using Namespace](#using-namespace)
@@ -278,6 +279,10 @@ Do return early except when having a single return point improves performance or
 ### Goto
 
 Do not use goto statements.
+
+## nullptr vs NULL
+
+Use `nullptr` instead of `NULL`. Also do not use `0` in their place, nor the opposite.
 
 ## File Structure and Libraries
 
