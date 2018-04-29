@@ -85,7 +85,7 @@ if (sandwich == tasty) eat(sandwich);
 
 ## Pointers
 
-All pointers should be initialized when they are declared. They should be reinitialized with nullptr after being freed.
+All pointers should be initialized when they are declared. They should be reinitialized with `nullptr` after being freed.
 
 Example:
 
@@ -99,7 +99,7 @@ delete window;
 window = nullptr;
 ```
 
-Indirection and address-of operators (* and &) should be right-aligned with the pointer name.
+Indirection and address-of operators (`*` and `&`) should be right-aligned with the pointer name.
 
 Example:
 
@@ -110,7 +110,7 @@ int *b = &a;
 
 ## Constants
 
-Prefer using const over #define. Only use #define when preprocessing is actually necessary.
+Prefer using const over `#define`. Only use `#define` when preprocessing is actually necessary.
 
 Example:
 
@@ -139,8 +139,8 @@ int i = (int)d;
 
 ## Sizeof
 
-Use sizeof(var) instead of sizeof(Type). Do not write the known size or type of a variable. Reference the variable name instead.
-The exception is when there is not a related variable to reference; then it is okay to use sizeof(Type);
+Use `sizeof(var)` instead of `sizeof(Type)`. Do not write the known size or type of a variable. Reference the variable name instead.
+The exception is when there is not a related variable to reference; then it is okay to use `sizeof(Type)`;
 
 Example:
 
@@ -283,19 +283,19 @@ Do not use goto statements.
 
 Header and source files should be named in camelCase.
 
-Source files should use the *.cpp file extension and not the less common *.cxx or *.cc extensions.
+Source files should use the `*.cpp` file extension and not the less common `*.cxx` or `*.cc` extensions.
 
-Header files should use the *.hpp file extension because it makes it clear that the header is written for C++.
-The exception is when writing headers that are meant to also support C, in which case use the *.h extension.
+Header files should use the `*.hpp` file extension because it makes it clear that the header is written for C++.
+The exception is when writing headers that are meant to also support C, in which case use the `*.h` extension.
 
 ### Includes
 
 Includes should be placed at the top of a file (below any copyright/file header comments) in the following order:
 
-- Project headers using #include "example.hpp"
-- Libraries local to the project using #include "library/example.hpp"
-- Libraries elsewhere in the system using #include <library/example.hpp>
-- Standard headers using #include <string>
+- Project headers using `#include "example.hpp"`
+- Libraries local to the project using `#include "library/example.hpp"`
+- Libraries elsewhere in the system using `#include <library/example.hpp>`
+- Standard headers using `#include <string>`
 
 Example:
 
@@ -310,7 +310,7 @@ Use C++ headers instead of C headers, for example use ctime instead of time.h.
 
 ### Using Namespace
 
-Do not use "using namespace std;" anywhere. This can cause issues when using libraries with conflicted type names. Prefer prefixing with std::.
+Do not use `using namespace std;` anywhere. This can cause issues when using libraries with conflicted type names. Prefer prefixing with std::.
 
 ### Boost
 
