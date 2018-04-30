@@ -267,7 +267,8 @@ Members within the above groups should be grouped in the following order:
   - Getter
   - Setter
 - Interface implementations
-- Member functions
+- Static member functions
+- Non-static member functions
 - Virtual member functions
 - Nested types
 
