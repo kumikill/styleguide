@@ -5,6 +5,7 @@ This guide is for the C++ programming language.
 ## Table of Contents
 
 - [Naming Convention](#naming-convention)
+- [Comments and Documentation](#comments-and-documentation)
 - [Indentation and Curly Braces](#indentation-and-curly-braces)
 - [Pointers](#pointers)
 - [Constants](#constants)
@@ -41,6 +42,45 @@ This guide is for the C++ programming language.
 | Template parameter  | TPascalCasing | Noun             | T, TItem, TPolicy                                |
 
 Refrain from using hungarian notation. The exception is when naming UI controls. Be consistent when using prefixes and suffixes.
+
+## Comments and Documentation
+
+Single-line comments should be formatted as in the following example:
+
+```cpp
+// This is a single-line comment.
+
+// Header
+```
+
+Note the space separating the `//` and the comment. Comments should start with a capital letter, and sentences should end
+with punctation. Headers/labels do not need to end with punctuation.
+
+Multi-line comments should be formatted as in the following example:
+
+```cpp
+/*
+ * A multi-line
+ * comment.
+*/
+```
+
+Note that the first and last lines are blank and the middle lines are indented with a space before the comments.
+
+Documentation should be located in the *header* file above the method declaration, using Doxygen comments as in the following example:
+
+```cpp
+/**
+ * @brief  Example public method.
+ * @note   Documented with Doxygen.
+ * @param  a: example variable
+ * @param  b: example variable
+ * @retval Example as a double.
+ */
+double ExampleClass::ExampleMethod(int a, bool b);
+```
+
+See [doxygen.org] for information on using Doxygen.
 
 ## Indentation and Curly Braces
 
