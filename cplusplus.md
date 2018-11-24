@@ -342,7 +342,8 @@ Includes should be placed at the top of a file (below any copyright/file header 
 - Project headers using `#include "example.hpp"`
 - Libraries local to the project using `#include "library/example.hpp"`
 - Libraries elsewhere in the system using `#include <library/example.hpp>`
-- Standard headers using `#include <string>`
+- System headers using `#include <example.hpp>`
+- Standard headers using `#include <example>`
 
 Example:
 
@@ -350,10 +351,13 @@ Example:
 #include "log.hpp"
 #include "freetype/freetype.h"
 #include <GLFW/glfw3.h>
+#include <windows.h>
 #include <string>
 ```
 
 Use C++ headers instead of C headers, for example use ctime instead of time.h.
+
+Include headers in *all* files they are used in. For example, if a file is used in both a class's header and source files, include it in both.
 
 ### Include Guards
 
