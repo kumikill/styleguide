@@ -380,6 +380,4 @@ Do not use `using namespace std;` anywhere. This can cause issues when using lib
 
 ### Boost
 
-Prefer standard C++ types instead of Boost types, for example smart pointers.
-
-Also prefer to not use Boost when possible as Boost is a bulky library.
+Prefer standard C++ types instead of Boost types, for example use the built-in <memory> and <filesystem> for smart pointers and file system operations. 
