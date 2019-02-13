@@ -127,7 +127,7 @@ if (sandwich == tasty) eat(sandwich);
 
 ## Pointers
 
-All pointers should be initialized when they are declared. They should be reinitialized with `nullptr` after being freed.
+All pointers should be initialized when they are declared. They should be reinitialized to `nullptr` after being freed.
 
 Example:
 
@@ -141,7 +141,7 @@ delete window;
 window = nullptr;
 ```
 
-Indirection and address-of operators (`*` and `&`) should be right-aligned with the pointer name.
+Dereference and address-of operators (`*` and `&`) should be right-aligned with the pointer name.
 
 Example:
 
@@ -197,7 +197,7 @@ sizeof(float);
 
 ## Macros
 
-Only use macros when absolutely necessary.
+Only use macros when absolutely necessary. Platform-dependant code is an example of acceptable use.
 
 Example:
 
