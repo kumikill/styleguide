@@ -364,13 +364,15 @@ Include headers in *all* files they are used in. For example, if a file is used 
 Use include guards in the following format for all header files:
 
 ```cpp
-#ifndef HEADER_NAME_H
-#define HEADER_NAME_H
+#ifndef HEADER_NAME_HPP
+#define HEADER_NAME_HPP
 // header code
 #endif
 ```
 
 Do not use `#pragma once`. Most modern compilers support it somehow, but it is still not standard.
+
+Include the project name, subdirectory (if any), file name, and extension in the `#define`. For a file called "log.hpp", in a "debug" subfolder, belonging to a project called "Game", use `GAME_DEBUG_LOG_HPP`. This prevents potential conflicts between two projects/libraries that have similar header names, while being more readable than a GUID.
 
 ### Using Namespace
 
