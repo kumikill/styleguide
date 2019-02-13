@@ -357,7 +357,7 @@ Example:
 
 Use C++ headers instead of C headers, for example use ctime instead of time.h.
 
-Include headers in *all* files they are used in. For example, if a file is used in both a class's header and source files, include it in both.
+Include headers in *all* files they are used in. For example, if a file is used in both a class's header and source files, include it in both. This ensures files are not dependant on other files' includes.
 
 ### Include Guards
 
