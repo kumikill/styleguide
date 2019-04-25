@@ -376,8 +376,8 @@ Include the project name, subdirectory (if any), file name, and extension in the
 
 ### Using Namespace
 
-Do not use `using namespace std;` anywhere. This can cause issues when using libraries with conflicted type names. Prefer prefixing with std::.
+Do not use `using namespace std;` anywhere. This can cause issues when using libraries with conflicted type names. Prefer prefixing with `std::`.
 
 ### Boost
 
-Prefer standard C++ types instead of Boost types, for example use the built-in <memory> and <filesystem> for smart pointers and file system operations. 
+Prefer standard C++ types instead of Boost types, for example use the built-in `<memory>` and `<filesystem>` for smart pointers and file system operations. 
