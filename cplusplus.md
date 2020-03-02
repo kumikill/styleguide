@@ -127,7 +127,7 @@ if (sandwich == tasty) eat(sandwich);
 
 ## Pointers
 
-All pointers should be initialized when they are declared. They should be reinitialized with `nullptr` after being freed.
+All pointers should be initialized when they are declared. They should be reinitialized to `nullptr` after being freed.
 
 Example:
 
@@ -141,7 +141,7 @@ delete window;
 window = nullptr;
 ```
 
-Indirection and address-of operators (`*` and `&`) should be right-aligned with the pointer name.
+Dereference and address-of operators (`*` and `&`) should be right-aligned with the pointer name.
 
 Example:
 
@@ -197,7 +197,7 @@ sizeof(float);
 
 ## Macros
 
-Only use macros when absolutely necessary.
+Only use macros when absolutely necessary. Platform-dependant code is an example of acceptable use.
 
 Example:
 
@@ -357,27 +357,27 @@ Example:
 
 Use C++ headers instead of C headers, for example use ctime instead of time.h.
 
-Include headers in *all* files they are used in. For example, if a file is used in both a class's header and source files, include it in both.
+Include headers in *all* files they are used in. For example, if a file is used in both a class's header and source files, include it in both. This ensures files are not dependant on other files' includes.
 
 ### Include Guards
 
 Use include guards in the following format for all header files:
 
 ```cpp
-#ifndef HEADER_NAME_H
-#define HEADER_NAME_H
+#ifndef HEADER_NAME_HPP
+#define HEADER_NAME_HPP
 // header code
 #endif
 ```
 
 Do not use `#pragma once`. Most modern compilers support it somehow, but it is still not standard.
 
+Include the project name, subdirectory (if any), file name, and extension in the `#define`. For a file called "log.hpp", in a "debug" subfolder, belonging to a project called "Game", use `GAME_DEBUG_LOG_HPP`. This prevents potential conflicts between two projects/libraries that have similar header names, while being more readable than a GUID.
+
 ### Using Namespace
 
-Do not use `using namespace std;` anywhere. This can cause issues when using libraries with conflicted type names. Prefer prefixing with std::.
+Do not use `using namespace std;` anywhere. This can cause issues when using libraries with conflicted type names. Prefer prefixing with `std::`.
 
 ### Boost
 
-Prefer standard C++ types instead of Boost types, for example smart pointers.
-
-Also prefer to not use Boost when possible as Boost is a bulky library.
+Prefer standard C++ types instead of Boost types, for example use the built-in `<memory>` and `<filesystem>` for smart pointers and file system operations. 
